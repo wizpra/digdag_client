@@ -27,7 +27,7 @@ module Digdag
           if method == :post
             request.headers['Content-Type'] = 'application/json'
           end
-          request.path = URI.encode(path)
+          request.path = URI.encode_www_form_component(path)
           request.body = options unless options.empty?
         end
       end
