@@ -22,7 +22,7 @@ module Digdag
         path = "/api/#{path}"
         case method
         when :get, :delete
-          request.url(URI.encode_www_form(path), options)
+          request.url(URI.encode_www_form_component(path), options)
         when :post, :put
           if method == :post
             request.headers['Content-Type'] = 'application/json'
