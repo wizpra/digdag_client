@@ -1,3 +1,5 @@
+require "webrick/httputils"
+
 module Digdag
   module Request
     def get(path, options={})
